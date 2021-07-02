@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        /* Style the buttons */
+        
+        .btn {
+            border: none;
+            outline: none;
+            padding: 20px 16px;
+            background-color: #e5eaf0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        /* Add a light grey background on mouse-over */
+        
+        .btn:hover {
+            background-color: rgb(11, 77, 131);
+        }
+        /* Add a dark background to the active button */
+        
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+    <h1>Subject</h1>
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+        <a href="DBMS.pdf" class="btn" onclick="filterSelection('TBC 401 DBMS')">TBC 401 DBMS</a>
+
+        <a href="BCA Notes Micro Processor Notes.pdf" class="btn" onclick="filterSelection('TBC 402 Microprocessor')">TBC 402 Microprocessor</a>
+
+        <a href="SOFTWARE PROCESS.pdf" class="btn" onclick="filterSelection('TBC 403 Software Engineering')">TBC 403 Software Engineering</a>
+
+        <a href="vb.net_tutorial bca sem 4.pdf" class="btn" onclick="filterSelection('TBC 404 Programming with VB .Net')">TBC 404 Programming with VB .Net</a>
+
+        <a href="BCA_Management_Information_System.pdf" class="btn" onclick="filterSelection('TBC 405 Management Information System')">TBC 405 Management Information System</a>
+
+    </div>
+
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+
+
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>

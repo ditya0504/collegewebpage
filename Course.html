@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            list-style: none;
+            background-color: rgb(13, 50, 95);
+        }
+        
+        .container {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        body h1 {
+            color: rgb(226, 23, 23);
+            top: 35%;
+            position: absolute;
+        }
+        
+        .myBtnContainer {
+            position: absolute;
+            top: 19%;
+        }
+        
+        style.container {
+            position: absolute;
+            top: 15%;
+            overflow: hidden;
+        }
+        
+        .filterDiv {
+            float: left;
+            background-color: darkslategrey color #1598cc;
+            width: 140px;
+            line-height: 90px;
+            text-align: center;
+            margin: 4px;
+            display: none;
+            /* Hidden by default */
+        }
+        
+        .div {
+            flex: 5;
+            text-align: left;
+            width: 130px;
+            margin: auto;
+        }
+        
+        .div ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        
+        .div ul li a {
+            line-height: 100px;
+            color: rgb(21, 224, 48);
+            text-decoration: none;
+            font-size: 24px;
+        }
+        
+        .div ul li::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: #0f0f0f;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        
+        .div ul li:hover::after {
+            width: 100%;
+        }
+        
+        .show {
+            display: block;
+        }
+        /* Style the buttons */
+        
+        .btn {
+            border: none;
+            outline: none;
+            padding: 20px 60px;
+            background-color: #30c8d3;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 3px;
+            margin-top: 100px;
+        }
+        
+        .div li a {
+            background: rgb(238, 124, 204);
+            width: 100px;
+            border: 1px solid rgb(236, 242, 245);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            top: left;
+            color: rgb(7, 6, 6);
+            font-size: 18px;
+            position: relative;
+            font-family: big john;
+            display: inline-block;
+        }
+        /* Add a light grey background on mouse-over */
+        
+        .btn:hover {
+            background-color: #ddd;
+        }
+        /* Add a dark background to the active button */
+        
+        .btn.active {
+            background-color: rgb(18, 109, 184);
+            color: white;
+        }
+        
+        .object {
+            overflow: hidden;
+        }
+    </style>
+    <a href="index.html"><img src="Logo_PNG_File.png"></a>
+    <div>
+        <ul1>
+            <li><a href="index.html ">HOME</a></li>
+        </ul1>
+    </div>
+    <h1>ALL COURSE</h1>
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">All Course</button>
+        <button class="btn" onclick="filterSelection('BCA')">BCA</button>
+        <button class="btn" onclick="filterSelection('MCA')">MCA</button>
+        <button class="btn" onclick="filterSelection('B-Tech')">B-Tech</button>
+        <button class="btn" onclick="filterSelection('M-Tech')">M-Tech</button>
+        <button class="btn" onclick="filterSelection('MBA')">MBA</button>
+    </div>
+
+
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div class="container">
+        <div class="filterDiv BCA">
+            <ul class="div">
+                <li><a href="subject.html">Semester 1</a></li>
+                <li><a href="bca-sem2.html">Semester 2</a></li>
+                <li><a href="bca-sem3.html">Semester 3</a></li>
+                <li><a href="bca-sem4.html">Semester 4</a></li>
+                <li><a href="bca-sem5.html">Semester 5</a></li>
+                <li><a href="bca-sem6.html">Semester 6</a></li>
+
+            </ul>
+        </div>
+        <div class="filterDiv MCA">
+            <ul class="div">
+                <li><a href="mca-sem1.html">Semester 1</a></li>
+                <li><a href="mca-sem2.html">Semester 2</a></li>
+                <li><a href="mca-sem3.html">Semester 3</a></li>
+                <li><a href="mca-sem4.html">Semester 4</a></li>
+            </ul>
+        </div>
+        <div class="filterDiv B-Tech">
+            <ul class="div">
+                <li><a href="#">Semester 1</a></li>
+                <li><a href="#">Semester 2</a></li>
+                <li><a href="#">Semester 3</a></li>
+                <li><a href="#">Semester 4</a></li>
+                <li><a href="#">Semester 5</a></li>
+                <li><a href="#">Semester 6</a></li>
+                <li><a href="#">Semester 7</a></li>
+                <li><a href="#">Semester 8</a></li>
+            </ul>
+        </div>
+        <div class="filterDiv M-Tech">
+            <ul class="div">
+                <li><a href="#">Semester 1</a></li>
+                <li><a href="#">Semester 2</a></li>
+                <li><a href="#">Semester 3</a></li>
+                <li><a href="#">Semester 4</a></li>
+            </ul>
+        </div>
+        <div class="filterDiv MBA">
+            <ul class="div">
+                <li><a href="#">Semester 1</a></li>
+                <li><a href="#">Semester 2</a></li>
+                <li><a href="#">Semester 3</a></li>
+                <li><a href="#">Semester 4</a></li>
+            </ul>
+        </div>
+        </ul>
+    </div>
+
+    </div>
+
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>
