@@ -4,11 +4,82 @@
 <body>
     <style>
         * {
-            margin: 0;
-            padding: 0;
             font-family: 'Roboto', sans-serif;
             list-style: none;
             background-color: rgb(13, 50, 95);
+        }
+        
+        .content {
+            max-width: 760px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+        }
+        
+        .dropdwn ul1 {
+            position: absolute;
+            top: 22%;
+            left: 67%;
+            float: center;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+        
+        .dropdwn ul1 li {
+            background: rgb(238, 124, 204);
+            width: 170px;
+            border: 1px solid #fff;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            top: left;
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            font-family: big john;
+            display: inline-block;
+        }
+        
+        .dropdwn ul1 li:hover {
+            background: crimson;
+        }
+        
+        .dropdwn ul1 ul {
+            display: none;
+        }
+        
+        .dropdwn ul1 li:hover>ul {
+            display: block;
+        }
+        
+        .dropdwn ul1 li a {
+            text-decoration: none;
+            color: #ff9900;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 06s ease;
+        }
+        
+        .dropdwn ul1 li a {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+        }
+        
+        .nav-links ul1 li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            background: #e658bb;
+            width: 90px;
+            border: 1px solid #fff;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            top: left;
+            color: #fff;
+            font-size: 15px;
+            font-family: big john;
         }
         
         .container {
@@ -18,7 +89,7 @@
         
         body h1 {
             color: rgb(226, 23, 23);
-            top: 35%;
+            top: 25%;
             position: absolute;
         }
         
@@ -125,75 +196,85 @@
             overflow: hidden;
         }
     </style>
-    <a href="index.html"><img src="Logo_PNG_File.png"></a>
+
+    <head>
+        <div class="content">
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <a href="index.html"><img src="Logo_PNG_File.png" width="760" height="150"></a>
     <div>
-        <ul1>
-            <li><a href="index.html ">HOME</a></li>
-        </ul1>
-    </div>
-    <h1>ALL COURSE</h1>
-    <!-- Control buttons -->
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')">All Course</button>
-        <button class="btn" onclick="filterSelection('BCA')">BCA</button>
-        <button class="btn" onclick="filterSelection('MCA')">MCA</button>
-        <button class="btn" onclick="filterSelection('B-Tech')">B-Tech</button>
-        <button class="btn" onclick="filterSelection('M-Tech')">M-Tech</button>
-        <button class="btn" onclick="filterSelection('MBA')">MBA</button>
-    </div>
+        <div class="nav-links " id="navlinks ">
+            <div class="dropdwn ">
+                <ul1>
+                    <li><a href="index.html ">HOME</a></li>
+                </ul1>
+            </div>
+            <h1>ALL COURSE</h1>
+            <!-- Control buttons -->
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">All Course</button>
+                <button class="btn" onclick="filterSelection('BCA')">BCA</button>
+                <button class="btn" onclick="filterSelection('MCA')">MCA</button>
+                <button class="btn" onclick="filterSelection('B-Tech')">B-Tech</button>
+                <button class="btn" onclick="filterSelection('M-Tech')">M-Tech</button>
+                <button class="btn" onclick="filterSelection('MBA')">MBA</button>
+            </div>
 
 
-    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-    <div class="container">
-        <div class="filterDiv BCA">
-            <ul class="div">
-                <li><a href="subject.html">Semester 1</a></li>
-                <li><a href="bca-sem2.html">Semester 2</a></li>
-                <li><a href="bca-sem3.html">Semester 3</a></li>
-                <li><a href="bca-sem4.html">Semester 4</a></li>
-                <li><a href="bca-sem5.html">Semester 5</a></li>
-                <li><a href="bca-sem6.html">Semester 6</a></li>
+            <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+            <div class="container">
+                <div class="filterDiv BCA">
+                    <ul class="div">
+                        <li><a href="subject.html">Semester 1</a></li>
+                        <li><a href="bca-sem2.html">Semester 2</a></li>
+                        <li><a href="bca-sem3.html">Semester 3</a></li>
+                        <li><a href="bca-sem4.html">Semester 4</a></li>
+                        <li><a href="bca-sem5.html">Semester 5</a></li>
+                        <li><a href="bca-sem6.html">Semester 6</a></li>
 
-            </ul>
+                    </ul>
+                </div>
+                <div class="filterDiv MCA">
+                    <ul class="div">
+                        <li><a href="mca-sem1.html">Semester 1</a></li>
+                        <li><a href="mca-sem2.html">Semester 2</a></li>
+                        <li><a href="mca-sem3.html">Semester 3</a></li>
+                        <li><a href="mca-sem4.html">Semester 4</a></li>
+                    </ul>
+                </div>
+                <div class="filterDiv B-Tech">
+                    <ul class="div">
+                        <li><a href="#">Semester 1</a></li>
+                        <li><a href="#">Semester 2</a></li>
+                        <li><a href="#">Semester 3</a></li>
+                        <li><a href="#">Semester 4</a></li>
+                        <li><a href="#">Semester 5</a></li>
+                        <li><a href="#">Semester 6</a></li>
+                        <li><a href="#">Semester 7</a></li>
+                        <li><a href="#">Semester 8</a></li>
+                    </ul>
+                </div>
+                <div class="filterDiv M-Tech">
+                    <ul class="div">
+                        <li><a href="#">Semester 1</a></li>
+                        <li><a href="#">Semester 2</a></li>
+                        <li><a href="#">Semester 3</a></li>
+                        <li><a href="#">Semester 4</a></li>
+                    </ul>
+                </div>
+                <div class="filterDiv MBA">
+                    <ul class="div">
+                        <li><a href="#">Semester 1</a></li>
+                        <li><a href="#">Semester 2</a></li>
+                        <li><a href="#">Semester 3</a></li>
+                        <li><a href="#">Semester 4</a></li>
+                    </ul>
+                </div>
+                </ul>
+            </div>
         </div>
-        <div class="filterDiv MCA">
-            <ul class="div">
-                <li><a href="mca-sem1.html">Semester 1</a></li>
-                <li><a href="mca-sem2.html">Semester 2</a></li>
-                <li><a href="mca-sem3.html">Semester 3</a></li>
-                <li><a href="mca-sem4.html">Semester 4</a></li>
-            </ul>
-        </div>
-        <div class="filterDiv B-Tech">
-            <ul class="div">
-                <li><a href="#">Semester 1</a></li>
-                <li><a href="#">Semester 2</a></li>
-                <li><a href="#">Semester 3</a></li>
-                <li><a href="#">Semester 4</a></li>
-                <li><a href="#">Semester 5</a></li>
-                <li><a href="#">Semester 6</a></li>
-                <li><a href="#">Semester 7</a></li>
-                <li><a href="#">Semester 8</a></li>
-            </ul>
-        </div>
-        <div class="filterDiv M-Tech">
-            <ul class="div">
-                <li><a href="#">Semester 1</a></li>
-                <li><a href="#">Semester 2</a></li>
-                <li><a href="#">Semester 3</a></li>
-                <li><a href="#">Semester 4</a></li>
-            </ul>
-        </div>
-        <div class="filterDiv MBA">
-            <ul class="div">
-                <li><a href="#">Semester 1</a></li>
-                <li><a href="#">Semester 2</a></li>
-                <li><a href="#">Semester 3</a></li>
-                <li><a href="#">Semester 4</a></li>
-            </ul>
-        </div>
-        </ul>
-    </div>
 
     </div>
 

@@ -1,125 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url(../geu-front.jpg);
-    background-position: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../geu-front.jpg);
     background-size: cover;
+    background-position: center;
     position: relative;
-}
-
-ul {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    float: left;
-    list-style-type: non;
-    margin-top: 30px;
-}
-
-.dropdwn ul {
-    float: center;
-    list-style-type: none;
-    margin-top: 40px;
-}
-
-.dropdwn ul li {
-    background: rgb(238, 124, 204);
-    width: 180px;
-    border: 1px solid rgb(236, 242, 245);
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    top: left;
-    color: rgb(245, 238, 238);
-    font-size: 14px;
-    position: relative;
-    font-family: big john;
-    display: inline-block;
-}
-
-.dropdwn ul li:hover {
-    background: crimson;
-}
-
-.dropdwn ul ul {
-    display: none;
-}
-
-.dropdwn ul li:hover>ul {
-    display: block;
-}
-
-.dropdwn ul li a {
-    text-decoration: none;
-    color: #ff9900;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 06s ease;
-}
-
-.dropdwn ul li a {
-    background-color: rgb(255, 255, 255);
-    color: #000;
-}
-
-.dropdwn {
-    width: 130px;
-    margin: 0 auto;
-}
-
-.dropdwn ul1 {
-    position: absolute;
-    top: 0%;
-    left: 1%;
-    float: center;
-    list-style-type: none;
-    margin-top: 25px;
-}
-
-.dropdwn ul1 li {
-    background: rgb(238, 124, 204);
-    width: 170px;
-    border: 1px solid #fff;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    top: left;
-    color: #fff;
-    font-size: 14px;
-    position: relative;
-    font-family: big john;
-    display: inline-block;
-}
-
-.dropdwn ul1 li:hover {
-    background: crimson;
-}
-
-.dropdwn ul1 ul {
-    display: none;
-}
-
-.dropdwn ul1 li:hover>ul {
-    display: block;
-}
-
-.dropdwn ul1 li a {
-    text-decoration: none;
-    color: #ff9900;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 06s ease;
-}
-
-.dropdwn ul1 li a {
-    background-color: rgb(255, 255, 255);
-    color: #000;
 }
 
 nav {
@@ -130,16 +21,12 @@ nav {
 }
 
 nav img {
-    position: absolute;
-    top: 0%;
-    left: 55%;
-    width: 450px;
-    height: 150px;
+    width: 150px;
 }
 
 .nav-links {
-    flex: 5;
-    text-align: center;
+    flex: 1;
+    text-align: right;
 }
 
 .nav-links ul li {
@@ -147,7 +34,7 @@ nav img {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    background: #e658bb;
+    background: #1491ca;
     width: 90px;
     border: 1px solid #fff;
     height: 30px;
@@ -159,10 +46,17 @@ nav img {
     font-family: big john;
 }
 
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
 .nav-links ul li a {
-    color: rgb(224, 21, 21);
+    color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .nav-links ul li::after {
@@ -180,17 +74,22 @@ nav img {
 }
 
 .text-box {
-    width: 130%;
-    color: rgb(163, 28, 19);
+    width: 100%;
+    color: #fff;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: trasition(-50%, -50%);
     text-align: center;
 }
 
 .text-box h1 {
-    font-size: 52px;
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
 }
 
 .hero-btn {
@@ -199,7 +98,7 @@ nav img {
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
-    font-size: 13px;
+    font-size: 18px;
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -211,7 +110,7 @@ nav img {
     transition: 1s;
 }
 
-nav.fa {
+nav .fa {
     display: none;
 }
 
@@ -228,7 +127,7 @@ nav.fa {
         height: 100vh;
         width: 200px;
         top: 0;
-        right: 200px;
+        right: -200px;
         text-align: left;
         z-index: 2;
         transition: 1s;
@@ -256,7 +155,7 @@ nav.fa {
 }
 
 .course {
-    width: 100%;
+    width: 80%;
     margin: auto;
     background-color: White;
     text-align: center;
@@ -266,6 +165,14 @@ nav.fa {
 h1 {
     font-size: 36px;
     font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
 }
 
 .row {
@@ -295,7 +202,7 @@ h3 {
 }
 
 .campus {
-    width: 100%;
+    width: 80%;
     margin: auto;
     background-color: White;
     text-align: center;
@@ -348,7 +255,7 @@ h3 {
 }
 
 .facilities {
-    width: 100%;
+    width: 80%;
     background: #ffff;
     margin: auto;
     text-align: center;
@@ -376,43 +283,43 @@ h3 {
     text-align: left;
 }
 
-.testimonials {
-    width: 100%;
+.testimonial {
+    width: 80%;
     background: white;
     margin: auto;
     padding-top: 100px;
     text-align: center;
 }
 
-.testimonials-col {
+.testimonial-col {
     flex-basis: 44%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
-    background: #ffa9a9;
+    background: #fce5e5;
     padding: 25px;
     cursor: pointer;
     display: flex;
 }
 
-.testimonials-col img {
-    height: 1px;
-    margin-left: 2px;
-    margin-right: 2px;
-    border-radius: 2%;
+.testimonial-col img {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
-.testimonials-col p {
+.testimonial-col p {
     padding: 0;
 }
 
-.testimonials-col h3 {
+.testimonial-col h3 {
     margin-top: 15px;
     text-align: left;
 }
 
-.testimonials-col .fa {
-    color: #f44336;
+.testimonial-col .fa {
+    color: #f11414;
 }
 
 .footer {
@@ -441,8 +348,8 @@ h3 {
 
 .cta {
     margin: 100px auto;
-    width: 100%;
-    background-image: url(../group.jpg);
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../group-discussion.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -451,18 +358,32 @@ h3 {
 }
 
 .cta h1 {
-    color: #fff;
+    color: rgb(250, 246, 246);
     margin-bottom: 40px;
     padding: 0;
 }
 
 .sub-header {
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
-    background-image: url(../geu-front.jpg);
+    background-image: url(../camp1.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+.text-box1 {
+    width: 130%;
+    color: rgb(8, 8, 8);
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box1 h1 {
+    font-size: 60px;
 }
 
 .blog-content {
