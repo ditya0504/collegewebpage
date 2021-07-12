@@ -9,6 +9,7 @@
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../geu-front.jpg);
     background-size: cover;
+    top: 10%;
     background-position: center;
     position: relative;
 }
@@ -18,10 +19,12 @@ nav {
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 
 nav img {
     width: 500px;
+    height: 112px;
     position: absolute;
     left: 0%;
     top: 0%;
@@ -37,16 +40,21 @@ nav img {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    background: #1491ca;
+    background-color: rgb(17, 83, 83);
     width: 90px;
     border: 1px solid #fff;
     height: 30px;
     line-height: 30px;
     text-align: center;
     top: left;
-    color: #fff;
+    color: rgb(161, 25, 25);
     font-size: 15px;
     font-family: big john;
+    transition: 0.8s all;
+}
+
+.nav-links ul li:hover {
+    background-color: rgb(238, 20, 20);
 }
 
 .nav-links ul li {
@@ -57,7 +65,7 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: #fff;
+    color: rgb(235, 228, 228);
     text-decoration: none;
     font-size: 13px;
 }
