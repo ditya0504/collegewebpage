@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University website Design</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 <style>
     .sub-header {
         min-height: 150vh;
@@ -27,13 +18,6 @@
         top: 45%;
         transform: transition(-50%, -50%);
         text-align: center;
-    }
-    
-    @media(max-width:700px) {
-        .text-box1 {
-            top: 100px;
-            color: rgb(235, 208, 208);
-        }
     }
     
     .text-box1 h1 {
@@ -128,9 +112,151 @@
         background: #f44336;
         transition: 1s;
     }
+    
+    .dropdwn ul1 {
+        position: absolute;
+        top: 0%;
+        left: 87%;
+        float: center;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+    
+    .dropdwn ul1 li {
+        background: rgb(238, 124, 204);
+        width: 170px;
+        border: 1px solid #fff;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        top: left;
+        color: #fff;
+        font-size: 14px;
+        position: relative;
+        font-family: big john;
+        display: inline-block;
+    }
+    
+    .dropdwn ul1 li:hover {
+        background: rgb(82, 5, 20);
+    }
+    
+    .dropdwn ul1 ul {
+        display: none;
+    }
+    
+    .dropdwn ul1 li:hover>ul {
+        display: block;
+    }
+    
+    .dropdwn ul1 li a {
+        text-decoration: none;
+        color: #ff9900;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 06s ease;
+    }
+    
+    .dropdwn ul1 li a {
+        background-color: rgb(255, 255, 255);
+        color: #000;
+    }
+    
+    .nav-links ul1 li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+        background: #e658bb;
+        width: 90px;
+        border: 1px solid #fff;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        top: left;
+        color: #fff;
+        font-size: 15px;
+        font-family: big john;
+    }
+    
+    @media(max-width:700px) {
+        .text-box1 {
+            top: 100px;
+            color: rgb(235, 208, 208);
+        }
+        .dropdwn ul1 {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            float: center;
+            list-style-type: none;
+            margin-top: 25px;
+        }
+        .dropdwn ul1 li {
+            background: rgb(238, 124, 204);
+            width: 170px;
+            border: 1px solid #fff;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            top: left;
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            font-family: big john;
+            display: inline-block;
+        }
+        .dropdwn ul1 li:hover {
+            background: rgb(82, 5, 20);
+        }
+        .dropdwn ul1 ul {
+            display: none;
+        }
+        .dropdwn ul1 li:hover>ul {
+            display: block;
+        }
+        .dropdwn ul1 li a {
+            text-decoration: none;
+            color: #ff9900;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: 06s ease;
+        }
+        .dropdwn ul1 li a {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+        }
+        .nav-links ul1 li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            background: #e658bb;
+            width: 90px;
+            border: 1px solid #fff;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            top: left;
+            color: #fff;
+            font-size: 15px;
+            font-family: big john;
+        }
+    }
 </style>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website Design</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
+
+
     <section class="sub-header">
         <img src="rishita.jpg">
         <nav>
@@ -138,6 +264,13 @@
         </nav>
         <div class="text-box1">
             <h1>Our Certificate & Online Program</h1>
+
+
+        </div>
+        <div class="dropdwn ">
+            <ul1>
+                <li><a href="index.html ">HOME</a></li>
+            </ul1>
         </div>
     </section>
     <section class="blog-content">
